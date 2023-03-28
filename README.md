@@ -1,5 +1,14 @@
 
-* Build the Docker container (NOTE the period at the end means build from the current directory)
+## Run Locally
+
+* Create a virtual environment
+* Install the required libraries
+* Run with `gunicorn` on port 80
+* Go to `localhost` in a web browser
+
+## Build and Run with Docker
+
+* Build the Docker container (NOTE the period at the end)
   * The [`docker build`](https://docs.docker.com/engine/reference/commandline/build/) documentation
 
   `docker build -t web_counter .`
