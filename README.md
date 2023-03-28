@@ -24,3 +24,10 @@
 
   `docker rm -f web_counter`
   
+* Create a shell inside the running container
+  * The ['docker 
+exec`](https://docs.docker.com/engine/reference/commandline/exec/) 
+documentation
+
+  `docker exec -it web_counter bash`
+
