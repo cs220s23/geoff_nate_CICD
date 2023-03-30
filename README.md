@@ -31,3 +31,13 @@ documentation
 
   `docker exec -it web_counter bash`
 
+
+## Mount Data Volume
+
+* A data volume allows data persistence in a Docker container.
+  * The [Volumes](https://docs.docker.com/storage/volumes/) documentation
+* The local path must be absolute.
+* In the shell [command substitution](https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html) is used to replace a command with its output (like a function call).
+
+  `docker run -d -p 80:80 -v $(pwd)/data:/app/data --name web_counter web_counter`
+  
