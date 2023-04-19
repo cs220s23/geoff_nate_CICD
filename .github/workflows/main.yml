@@ -7,8 +7,8 @@ on:
     branches: [ "main" ]
 
 env:
-  REMOTE_HOST: ec2-54-163-80-167.compute-1.amazonaws.com
-  REMOTE_USER: ec2-user
+  REMOTE_HOST: "ec2-54-163-80-167.compute-1.amazonaws.com"
+  REMOTE_USER: "ec2-user"
 
 permissions:
   contents: read
@@ -24,7 +24,7 @@ jobs:
           mkdir -p ~/.ssh/
           echo "$SSH_KEY" > ~/.ssh/github-actions-key
           chmod 600 ~/.ssh/github-actions-key
-          ssh -i ~/.ssh/github-actions-key -Y $SSH_USER@$SSH_HOST ./redeploy
+          ssh -i ~/.ssh/github-actions-key -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST ./redeploy
         env:
           SSH_HOST: ${{ env.REMOTE_HOST }}
           SSH_USER: ${{ env.REMOTE_USER }}
