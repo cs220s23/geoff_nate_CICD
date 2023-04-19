@@ -6,8 +6,6 @@
 	- `sudo yum install -y docker`
 	- `sudo service docker start`
 	- `sudo usermod -a -G docker ec2-user`
-	- `cd csci220_final`
-	- `mkdir data`
 - Create a file in the home directory of the ec2 instance called `redeploy` with the following code:
 	- `docker rm -f web_counter`
 	- `cd csci220_final`
