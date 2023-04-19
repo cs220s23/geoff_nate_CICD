@@ -24,7 +24,7 @@ jobs:
           mkdir -p ~/.ssh/
           echo "$SSH_KEY" > ~/.ssh/github-actions-key
           chmod 600 ~/.ssh/github-actions-key
-          ssh -i ~/.ssh/github-actions-key -Y $SSH_USER@$SSH_HOST ./redeploy
+          ssh -i ~/.ssh/github-actions-key $SSH_USER@$SSH_HOST ./redeploy
         env:
           SSH_HOST: ${{ env.REMOTE_HOST }}
           SSH_USER: ${{ env.REMOTE_USER }}
