@@ -1,0 +1,31 @@
+name: ssh-into-aws-ec2
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  REMOTE_HOST: ec2-54-163-80-167.compute-1.amazonaws.com
+  REMOTE_USER: ec2-user
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/github-actions-key
+          chmod 600 ~/.ssh/github-actions-key
+          ssh -i ~/.ssh/github-actions-key $SSH_USER@$SSH_HOST ./redeploy
+        env:
+          SSH_HOST: ${{ env.REMOTE_HOST }}
+          SSH_USER: ${{ env.REMOTE_USER }}
+          SSH_KEY: ${{ secrets.labuserpem }} 
