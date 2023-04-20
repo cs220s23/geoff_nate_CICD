@@ -1,4 +1,5 @@
 docker rm -f web_counter
+cd csci220_final
 git pull
 docker build -t web_counter .
 docker run -d -p 80:80 -v $(pwd)/data:/app/data --name web_counter web_counter
