@@ -15,4 +15,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Run tests
-        run: pytest 
+        run: csci220_final/.venv/bin/pytest 
