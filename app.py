@@ -32,8 +32,6 @@ def hello():
     return "<h1 style='color:{}'>Hello World! {}</h1>".format(color, count)
 
 def isEven(n):
-    if n in [2, 4, 6, 8, 10]:
-        return True
     return False
 
 
