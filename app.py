@@ -32,7 +32,7 @@ def hello():
     return "<h1 style='color:{}'>Hello World! {}</h1>".format(color, count)
 
 def isEven(n):
-    return n % 2 == 0
+    return n % 2 == 1
 
 
 if __name__ == "__main__":
