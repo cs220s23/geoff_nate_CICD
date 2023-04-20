@@ -26,7 +26,15 @@ def hello():
     count = read_count()    
     count += 1
     save_count(count);
-    return "<h1 style='color:red'>Hello World! {}</h1>".format(count)
+    color = "blue"
+    if (isEven(count)):
+        color = "red"
+    return "<h1 style='color:{}'>Hello World! {}</h1>".format(color, count)
+
+def isEven(n):
+    if n in [2, 4, 6, 8, 10]:
+        return True
+    return False
 
 
 if __name__ == "__main__":
