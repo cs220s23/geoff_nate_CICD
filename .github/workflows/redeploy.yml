@@ -5,7 +5,7 @@ on:
     branches: [ "main" ]
 
 env:
-  REMOTE_HOST: "ec2-54-157-196-19.compute-1.amazonaws.com"
+  REMOTE_HOST: "ec2-3-89-238-163.compute-1.amazonaws.com"
   REMOTE_USER: "ec2-user"
 
 permissions:
