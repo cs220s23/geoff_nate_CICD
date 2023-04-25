@@ -15,4 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Run tests
-        run: pytest 
+        run: |
+          pip install -r requirements.txt
+          pytest
+    
