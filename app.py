@@ -32,7 +32,9 @@ def hello():
     return "<h1 style='color:{}'>Hello World! {}</h1>".format(color, count)
 
 def isEven(n):
-	return n % 2 == 0
+	if n in [2, 4, 6, 8, 10]:
+		return True
+	return False
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8000)
